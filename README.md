@@ -17,7 +17,7 @@ Contents
 |-- [6 - Improved Styling with CSS](./1%20-%20Web%20Development%20Foundations/6%20-%20Improved%20Styling%20with%20CSS/)  
 |-- [7 - Making Websites Responsive](./1%20-%20Web%20Development%20Foundations/7%20-%20Making%20a%20Website%20Responsive/)  
 
-[2 - Building Interactive](./2%20-%20Building%20Interactive%20Websites/)/  
+[2 - Building Interactive Websites](./2%20-%20Building%20Interactive%20Websites/)/  
 |-- [1 - JavaScript Syntax, Part I](./2%20-%20Building%20Interactive%20Websites/1%20-%20JavaScript%20Syntax,%20Part%20I/)  
 |-- [2 - JavaScript Syntax, Part II](./2%20-%20Building%20Interactive%20Websites/2%20-%20JavaScript%20Syntax,%20Part%20II/)  
 |-- [3 - Git and GitHub, Part I](./2%20-%20Building%20Interactive%20Websites/3%20-%20Git%20and%20Github,%20Part%20I/)  
