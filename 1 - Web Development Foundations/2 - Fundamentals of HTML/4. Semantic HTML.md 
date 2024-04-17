@@ -1,0 +1,131 @@
+# Semantic HTML
+
+### Introduction to Semantic HTML
+
+- *Semantic* means "relating to meaning"
+- **Semantic elements** provide information about the content on the inside of opening and closing tags.
+- **<div>** and **<span>** are non-semantic - there's no context
+- We could use the following to add more meaning to the information
+   - **<header>**
+   - **<nav>**
+   - **<article>**
+   - **<figure>**
+   - **<footer>**
+- Advantages to using Semantic HTML
+   - Accessibility - mobile and screen readers
+   - SEO - makes your website easier to crawl meaninfully
+   - Easy to Understand - code is easier to read
+
+### Header and Nav
+
+- **<header>** - Contains a **<nav>** and/or a set of informational headings.
+
+### Main and Footer
+
+- **<main>** - holds the dominant content of the page
+   - Helps the browser to identify the *main* information of the page and to distinguish it from all the other information.
+
+```html
+<main>
+  <header> <!--Doesn't have to only exist at page level-->
+    <h1>Types of Sports</h1>
+  </header>
+  <article>
+    <h3>Baseball</h3>
+    <p>
+      The first game of baseball was played in Cooperstown, New York in the summer of 1839.
+    </p>
+  </article>
+</main>
+```
+
+- **<footer>** - contains the information at the bottom. Usually things like
+   - contact
+   - copyright
+   - terms of use
+   - a site map
+   - top of page link
+
+### Article and Section
+
+- Everything above is the body of the page.
+- These two go *in* the body.
+- **<section>** - this defines elements of the *document.* Maybe things of the same theme, or content that is related, maybe a chapter of information, maybe a heading.
+   - Why use this over a DIV? - Isn't this just a generic as DIV?
+      - Basically, section holds content that people are going to consume. If you're working with something on the site that doesn't have a name or isn't delivering meaningful content, just use a DIV.
+- **<article>** - holds content that makes sense on its own. Articles, blogs, comments, magazines. It clearly identifies the content that is supposed to be read. This may or may not include the heading
+
+```html
+<section>
+  <h2>Fun Facts About Cricket</h2>
+  <article>
+    <p>A single match of cricket can last up to 5 days.</p>
+  </article>
+  </section>
+```
+
+### The Aside Element
+
+- **<aside>** - content that can be added in support of another element but isn't required to understand the main content.
+   - Bibliographies
+   - Endnotes
+   - Comments
+   - Pull quotes
+   - Editorial sidebars
+   - Additional information
+- This is typically outside of ARTICLE
+
+### Figure and Figcaption
+
+- **<figure>** - for media, image, illustration, diagram, code snippet, etc
+- **<figcaption>** - the caption for the above figure, it is placed with IMG (or whatever element is used for the figure) inside FIGURE
+   - keeps things from getting displaced if the figure has to move
+
+```html
+<figure>
+  <img src="overwatch.jpg">
+  <figcaption>This picture shows characters from Overwatch.</figcaption>
+</figure>
+```
+
+### Audio and Attributes
+
+- **<audio>** - used to embed audio content
+- **<video>** - used to embed video content into a document
+- **<source>** - self closing - put inside an audio element to specify the source.
+   - AUDIO can be used the same way as img
+
+      `<audio controls src=“#”>`
+
+      but this wont allow for uploading multiple sources in case the audio fails.
+
+```html
+<audio controls>
+  <source src="#.flac" type="audio/flac">
+  <source src="#.mp3" type="audio/mpeg">
+  <p>Your browser doesn't support HTML5 audio. 
+    Download <a href="#.flac">FLAC</a> instead.</p>
+</audio>
+```
+
+- Attributes
+   - controls - puts controls for the audio on the page
+   - src - specifies the URL of the audio
+   - [A list of other attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#Attributes)
+
+### Video and Embed
+
+- VIDEO is the same as audio essentially but for video files.
+- Attributes:
+   - controls
+   - autoplay
+   - loop
+
+```html
+<video src="coding.mp4" controls>Video not supported</video>
+```
+
+- **<embed>** - deprecated, but it functions like img for essentially all media content
+   - EMBED can be used to add local files too!
+   - As a general rule: if AUDIO, VIDEO, or IMG aren’t accurate representations of the file that you’re trying to embed, then use EMBED.
+
