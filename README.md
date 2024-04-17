@@ -7,8 +7,8 @@ If you're interested in learning, I can't reccommend Codecademy's [Career Paths]
 
 Contents
 --------
-codecademy-notes/
-|
+codecademy-notes/  
+|  
 +-- [1 - Web Development Foundations](./1%20-%20Web%20Development%20Foundations/)/  
     |
     +-- [1 - Welcome to the Full-Stack Engineer Path](./1%20-%20Web%20Development%20Foundations/1%20-%20Welcome%20to%20the%20Full-Stack%20Engineer%20Path/)  
@@ -18,7 +18,7 @@ codecademy-notes/
     +-- [5 - Deploying Websites](./1%20-%20Web%20Development%20Foundations/5%20-%20Deploying%20Websites/)  
     +-- [6 - Improved Styling with CSS](./1%20-%20Web%20Development%20Foundations/6%20-%20Improved%20Styling%20with%20CSS/)  
     +-- [7 - Making Websites Responsive](./1%20-%20Web%20Development%20Foundations/7%20-%20Making%20a%20Website%20Responsive/)  
-|
+|  
 +-- [2 - Building Interactive](./2%20-%20Building%20Interactive%20Websites/)/  
     |
     +-- [1 - JavaScript Syntax, Part I](./2%20-%20Building%20Interactive%20Websites/1%20-%20JavaScript%20Syntax,%20Part%20I/)  
@@ -26,7 +26,7 @@ codecademy-notes/
     +-- [3 - Git and GitHub, Part I](./2%20-%20Building%20Interactive%20Websites/3%20-%20Git%20and%20Github,%20Part%20I/)  
     +-- [4 - Building Interactive Websites](./2%20-%20Building%20Interactive%20Websites/4%20-%20Building%20Interactive%20Websites/)  
     +-- [5 - Making a Website Accessible](./2%20-%20Building%20Interactive%20Websites/5%20-%20Making%20a%20Website%20Accessible/)  
-|
+|  
 +-- [3 - Front-End Development](./3%20-%20Front-End%20Development/)/  
     |
     +-- [1 - JavaScript Syntax, Part III](./3%20-%20Front-End%20Development/1%20-%20JavaScript%20Syntax,%20Part%20III/)  
