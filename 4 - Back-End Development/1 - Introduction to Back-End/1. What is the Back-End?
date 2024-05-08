@@ -1,0 +1,33 @@
+# What is the Back-End?
+
+- Back end are the server-side technologies that allow a website or an application to work.
+- Think of it like a restaurant: the menu would be the front end and the kitchen is the Back-End
+- The server and the database together can be considered the back end
+
+### Back-End involves...
+
+- Database creation, integration and management
+- Using back-end frameworks to build server-side software
+- Data validation
+- Integrate user facing elements with server-side logic
+
+### Technologies/software in the back-end
+
+- Databases or "The Brain"
+   - MySQL
+   - MongoDB
+   - Oracle
+   - PostgreSQL
+- Technologies and software in back-end
+   - Ruby
+   - Python
+   - PHP
+   - Node
+   - Java
+   - and more
+- Frameworks (libraries of server-side programming languages)
+   - Rails (for RUby
+   - Django (Python)
+   - Flask (Python)
+   - Express (Node)
+

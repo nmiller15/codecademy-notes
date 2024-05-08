@@ -1,0 +1,19 @@
+# What is a Server?
+
+- As covered eariler in this course, servers are computers that "serve" or deliver data to clients upon request
+
+### Examples of Server Operating Systems
+
+- Windows
+- Unix
+- Linux
+
+### Types of Servers
+
+- File servers - store data files for multiple users and provide access to stored files
+- Database server - allows another computer to access the database and retrieve or upload data
+- Web server - delivers web pages requested by multiple client web browsers
+- Mail servers - store and deliver email through an email service, digitial “post office"
+- Application server - provides a software environment with all needed requirements for an application, allows users to use an application without needing to download software
+- Proxy server - sits between a client and the internet, making requests on your behalf
+
