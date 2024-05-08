@@ -1,6 +1,8 @@
 Codecademy Notes
 ================
 
+<meter min=0 max=100 low=25 high=75 value=50 style="width:100%"></meter>
+
 Keep up with what I'm learning through my Codecademy Full-Stack Developer Professional Certification! These serve as my own abridged documentation on the many technologies, methodologies, and best practices I've been learning through the program!
 
 If you're interested in learning, I can't reccommend Codecademy's [Career Paths](https://www.codecademy.com/catalog/all) enough! I signed up for Pro in January, and it was a very worthwhile investment so far!
@@ -37,3 +39,4 @@ Contents
 [4 - Back-End Development](./4%20-%20Back-End%20Development/)/  
 |-- [Introduction to Back-End](./4%20-%20Back-End%20Development/1%20-%20Introduction%20to%20Back-End/)  
 |-- [Back-End JavaScript with Node.js](./4%20-%20Back-End%20Development/2%20-%20Back-End%20JavaScript%20with%20Node.js/)  
+
