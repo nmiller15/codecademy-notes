@@ -34,5 +34,5 @@ Contents
 |-- [Redux](./3%20-%20Front-End%20Development/7%20-%20Redux/)  
 |-- [Git and GitHub, Part II](./3%20-%20Front-End%20Development/8%20-%20Git%20and%20GitHub,%20Part%20II/)
 
-[4 - Back-End Development](./4%20-%20Back-End%20Development/)/
-|-- [Introduction to Back-End](./4%20-%20Back-End%20Development/1%20-%20Introduction%20to%20Back-End/)
+[4 - Back-End Development](./4%20-%20Back-End%20Development/)/  
+|-- [Introduction to Back-End](./4%20-%20Back-End%20Development/1%20-%20Introduction%20to%20Back-End/)  

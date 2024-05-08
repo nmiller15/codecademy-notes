@@ -1,0 +1,177 @@
+# Introduction to Node.js
+
+### Introduction
+
+[JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+[Index | Node.js v22.0.0 Documentation](https://nodejs.org/api/)
+
+- JavaScript's main limitation since its inception was that it could only be run in the browser. Meaning that front-end and back-end needed to be done in different languages.
+- Node solves this problem, by allowing JavaScript to be run in the command-line or in desktop applications.
+- Node is a *runtime*, a *runtime* converts high-level human-readable code into something that the computer can read and execute.
+- Intall Node using this ⇒ [link](https://www.codecademy.com/content-items/c4fe3060dbc61fc82d810c4ea06c29a8)
+- Check what version of node you have installed by using `node -v`
+
+### The Node REPL
+
+- REPL:  Read - Eval - Print Loop
+   - A program that loops, or repeatedly cycles, through three different states
+      - Read state: program reads input from a user
+      - Eval state: evaluates the user input
+      - Print state: program prints out it evalutation to the console
+      - Loop back!
+- `node` access the built-in REPL
+- `.editor` while node is active opens an editor
+- The Node REPL contains a `global` object which is accessible anywhere in addition to the already built in objects of JavaScript
+- Any objects that are browser specific, like the `Window` object won't be accessible here because there is no browser and no DOM
+
+### Running a Program with Node
+
+- You can run a program with Node by:
+   1. Saving your program in a file with the extension `.js`
+   2. Running the command `node myProgram.js`
+
+### Core Modules
+
+- What is Modularity?
+   - In programming, separation of concerns states that we should separate the functions of our code so that each thing that we write does one thing. So rather than having one file that does everything that an app does, we instead section this functionality off into different files. This is called modularity.
+   - The way these files talk to each other is through the JavaScript function `require()`
+   - We will run the one file that will likely call a tree of other files whenever we run an application.
+- What are core modules?
+   - The developers of node knew that the users of Node would have similar use cases and need specific functionalities, so they developed modules into node that can be used.
+   - These modules are called *core modules*.
+   - Within the source code of Node, the core modules can be located in the *lib/* folder
+   - We can make them available in our file by passing a string with the name of the module to the `require()` function
+
+```javascript
+// Require in the 'events' core module:
+const events = require('events')
+```
+
+- There are many core modules that you can use, and they can be displayed in the Node REPL
+
+```javascript
+require('module').builtinModules
+```
+
+### The Console Module
+
+- In the browser, the `console` object is something that we used regularly, and we have access to a `console` module in Node using the same syntax. This object is available for use without calling `require()` since it is a *global module*.
+- It contains familiar methods:
+   - `.log()` to log to the terminal
+   - `.assert()` to pint a message if the value is falsy
+   - `.table()` to print out a table in the terminal from an object or array
+
+### The Process Module
+
+- On a computer, a process is an instance of a program running. Processes are happening all the time on a computer, and they can be viewed on Task Manager or Activity Monitor depending on whether you're on a Mac or Windows machine.
+- Node has a global object called `process` that contains methods and information about the current process.
+- `process.env` - stores and controls information about the current environment the process is running in
+- A common convention for `process.env` is --
+
+```javascript
+if (process.env.NODE_ENV === 'development') {
+  console.log('You are in a development environment.')
+}
+```
+
+- `process.memoryUsage()` - Returns information on the demands of a process
+   - may look like:
+
+```javascript
+{ rss: 26247168,
+  heapTotal: 5767675,
+  heapUsed: 3575743,
+  external: 3442 }
+```
+
+- A *heap* is a data structure, but the word can also refer to a block of computer memory, so in this case, the heapTotal and heapUsed represent a number of bytes that a process is using.
+- You can call these values with `process.memoryUsage().heapUsed`
+- `process.argv` - an array of the command line arguments passed to a process
+
+```other
+node myProcess.js these are arguments
+```
+
+```javascript
+// myProcess.js
+console.log(process.argv[0])   // node
+console.log(process.argv[2])   // these
+console.log(process.argv[4])   // arguments
+```
+
+[Process | Node.js v22.1.0 Documentation](https://nodejs.org/api/process.html)
+
+### The OS Module
+
+- Node also empowers us to access information about the computer, operating system, and network that is running the process through the os module
+- This is not a global object, and it must be required by the script:
+
+```javascript
+const os = require('os');
+
+const local = {
+  'Operating System': os.type(),
+  'CPU Architecture': os.arch(),
+  'NIC Info': os.networkInterfaces(),
+  'Home Directory': os.homedir(),
+  'Host Name': os.hostname(),
+  'Last Reboot': os.uptime()
+}
+```
+
+### The Util Module
+
+- Utility functions provide separation of concerns for different areas of code, removing complex operations from components that may just be responsible for displaying – Node includes a `util` object that contains methods that can be used for various things.
+- Common uses for util:
+   - Validate data types:
+
+```javascript
+const util = require('util');
+
+const today = new Date();
+const christmas = 'December 25, 2024'
+
+console.log(util.types.isDate(today));        // true
+console.log(util.types.isDate(earthDay));     // false
+```
+
+   - Simplify asynchronous operations:
+      + getUser with nested callbacks mock
+
+```javascript
+function getUser (id, callback) {
+  return setTimeout(() => {
+    if (id === 5) {
+      callback(null, {nickname: 'Teddy'})
+    } else {
+      callback(new Error('User not found'))
+    }
+  }, 1000)
+}
+
+function callback (error, user) {
+  if (error) {
+    console.error(error.message)
+    process.exit(1)
+  }
+
+  console.log(`User found! Their nickname is ${user.nickname}`)
+}
+
+getUser(1, callback); // 'User not found!'
+getUser(5, callback); // 'User found, Their nickname is Teddy'
+```
+
+```javascript
+const getUserPromise = util.promisify(getUser);
+
+getUserPromise(id)
+  .then((user) => {
+    console.log('User found! Their nickname is: ${user.nickname}')
+  })
+  .catch((error) => {
+    console.log('User not found', error);
+  })
+```
+
