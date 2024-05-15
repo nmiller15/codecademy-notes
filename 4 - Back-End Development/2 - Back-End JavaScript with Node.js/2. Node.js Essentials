@@ -1,0 +1,176 @@
+# Node.js Essentials
+
+### The Events Module
+
+- Event-driven architecture is giving the computer a set of instructions to execute to handle specific actions. Instead of a predefined order, events are handled.
+- Node provides an `EventEmitter` class that can be accessed through requiring the `events` core module.
+
+```javascript
+// Require 'events' core module
+let events = require('events');
+
+// Create an instance of the EventEmitter class
+let myEmitter = new events.EventEmitter();
+
+let newUserListener = (data) => {
+  console.log(`We have a new user: ${data}.`)
+}
+
+// newUserListener is set as the callback for 'new user' event
+myEmitter.on('new user', newUserListener)
+
+// 'new user' event is emitted, using the name 'lily pad'
+myEmitter.emit('new user', 'Lily Pad');
+```
+
+- `.on()`  method ties an event to listen for to a callback function
+- `.emit()` method creates or "emits" that event with an argument of data that will be passed to the assigned callback function
+
+### User Input/Output
+
+- In Node, the basic input output system is the terminal.
+- We can get output from using `console.log()` which is what is called a "thin wrapper" for Node's `process.stdout()` method "process, standard output"
+
+```javascript
+process.stdin.on('data', (userInput) => {
+  let input = userInput.toString()
+  console.log(input);
+})
+```
+
+- `process.stdin()` is an instance of the `EventEmitter` class, so we can use the `.on()` method with it. This code will log a user input to the console after converting it to a string.
+- User inputs from the terminal are actually instances of the Buffer class which is bytes. So to use it normally, we need to convert it to a string.
+
+### The Error Module
+
+- The Node environment has a built in `error` module that contains all the standard JavaScript errors and the `Error` class.
+- The `error` module is global, so it doesn't need to be imported.
+- In synchronous code, we can use error handling like `try…catch` statements, but in async code many API's use *error-first callback functions* like below:
+
+```javascript
+const errorFirstCallback = (err, data)  => {
+  if (err) {
+    console.log(`There WAS an error: ${err}`);
+  } else {
+    // err was falsy
+    console.log(`There was NO error. Event data: ${data}`);
+  }
+}
+```
+
+- In this instance, if the task results in an error, it will be passed as the first argument, and if there is no error, the first argument will be `undefined`
+
+### The Buffer Module
+
+- Another globally scoped module is `Buffer` which handles binary data.
+- A `Buffer` object is a fixed size of memory that cannot be altered, it can be thought of as an array of integers where each value is a byte. Each integer can have a value between 0 and 255 inclusive.
+- Buffer methods:
+   - `.alloc()`  creates a new `Buffer` object with:
+      - size - specified by the first parameter*
+      - fill - a value to fill the buffer with (defaults to 0)
+      - encoding - (defaults to utf-8)
+   - `.toString()` converts Buffer to human-readable string, contains three optional arguments
+      - encoding: def - utf-8
+      - start: what byte to start translating (zero indexed)
+      - end: offset to end translating (zero indexed)
+   - `.from()` create a new `Buffer` object from the specified string, array or buffer
+      - Object* - this will fill the buffer
+      - encoding - def utf-8
+   - `.concat()` joins buffer objects passed in an array into one
+      - Array* - of `Buffer` objects
+      - Length
+
+```javascript
+// Allocate buffer of size 15 filled with 'b'
+const bufferAlloc = Buffer.alloc(15, 'b')
+
+// Create buffer1 with 'hello' and buffer2 with 'world'
+const buffer1 = Buffer.from('hello');
+const buffer2 = Buffer.from('world');
+
+// Combine buffer1 and buffer2
+const bufferArray = [buffer1, buffer2];
+const bufferConcat = Buffer.concat(bufferArray);
+
+// Translate buffer to string
+const bufferString = bufferConcat.toString();
+
+// Uncomment the appropriate `console.log()` to ouput to console
+//console.log(bufferAlloc);
+//console.log('Buffer 1:', buffer1, 'Buffer 2:', buffer2)
+//console.log(bufferConcat);
+console.log(bufferString);
+```
+
+### The FS Module
+
+- In back end applications, it is necessary to have access to the file system which we can access through the **fs** API.
+- Applications can be segmented, isolated, or *sandboxed*, to protect users from malicious programs.
+- All of the `fs` methods have synchronous and asynchronous versions
+
+```javascript
+const fs = require('fs');
+
+let readDataCallback = (err, data) => {
+  if (err) {
+    console.log(`Something went wrong: ${err}`);
+  } else {
+    console.log(`Provided file contained: ${data}`);
+  }
+};
+
+fs.readFile('./file.txt', 'utf-8', readDataCallback)
+```
+
+- Uses the `.readFile()` method with an error first callback that will log the contents of the given file to the console.
+
+### Readable Streams
+
+- A stream is a piece of data that is being processed sequentially rather than all at once.
+- Using streams, we can read and write to files line by line.
+- `readline.createInterface()` - core module and method to read files line-by-line
+
+```javascript
+const readline = require('readline');
+const fs = require('fs');
+
+const myInterface = readline.createInterface({
+  input: fs.createReadStream('text.txt')
+});
+
+myInterface.on('line', (fileLine) => {
+  console.log(`The line read: ${fileLine}`);
+});
+```
+
+   - Code Walkthrough:
+      1. Require readline module and fs module
+      2. Set `myInferface` to the result of calling the `.createInterface()` method of `readline`
+      3. Pass an object to `readline` with an input of `fs.createReadStream('text.txt')` which creates a stream from the file passed to it.
+      4. Assign an anonymous listener callback to execute when `line` events are emitted. (These are emitted after each line from the file is read)
+      5. Log's the line of the file to the console.
+
+### Writeable Streams
+
+```javascript
+const fs = require('fs')
+
+const fileStream = fs.createWriteStream('output.txt');
+
+fileStream.write('This is the first line!'); 
+fileStream.write('This is the second line!');
+fileStream.end();
+```
+
+- The output file for this code is `output.txt`
+
+### The Timers Module
+
+- The `timers` module is global and does not need to be required.
+- timer functions:
+   - `setTimeout()`
+   - `setInterval()`
+   - `setImmediate()` - execute the callback after the current poll phase is completed
+      - callback function*
+      - arguments for that function
+- When the timers in Node.js are added to the Node.js event loop. So they're scheduled and put into a queue that is processed at every event loop iteration.
