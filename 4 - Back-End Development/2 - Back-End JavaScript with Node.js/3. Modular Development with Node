@@ -1,0 +1,36 @@
+# Modular Development with Node
+
+- Code should be separated by its concern, meaning that your code should be in multiple files, that we can call modules.
+- A well-constructed module does *one* thing, and that module can be used in many different places.
+- The ES6 syntax for modules is `import` and `export`
+- In node we use `module.exports` and `require()`
+- `module.exports` is a built in object that you can add functions to as properties to make them available to other files
+
+```javascript
+// file.js
+const functionToExport = () => {
+  //
+}
+const anotherFunction = () => {
+  //
+}
+module.exports.functionToExport = functionToExport;
+module.exports.anotherFunction = anotherFunction;
+module.exports.aThirdFunction = function(parms) {
+  return //
+};
+```
+
+- The `require()` function accepts a file path as a string to import functions into another file
+
+```javascript
+const importedFunctionObject = require('./file.js');
+const functionToExport = importedFunctionObject.functionToExport;
+const aotherFunction = importedFunctionObject.anotherFunction;
+
+// or use object destructuring
+const { functionToExport, anotherFunction } = require(`./file.js`);
+```
+
+[Modules: CommonJS modules | Node.js v14.21.3 Documentation](https://nodejs.org/docs/latest-v14.x/api/modules.html)
+
