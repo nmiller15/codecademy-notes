@@ -1,7 +1,7 @@
 Codecademy Notes
 ================
 
-<meter min=0 max=100 low=25 high=75 value=59 style="width:100%"></meter>
+<meter min=0 max=100 low=25 high=75 value=60 style="width:100%"></meter>
 
 Keep up with what I'm learning through my Codecademy Full-Stack Developer Professional Certification! These serve as my own abridged documentation on the many technologies, methodologies, and best practices I've been learning through the program!
 
@@ -43,3 +43,4 @@ Contents
 |-- [User Authentication and Authorization](./4%20-%20Back-End%20Development/4%20-%20User%20Authentication%20and%20Authorization/)  
 |-- [Back-End and Feature Testing](./4%20-%20Back-End%20Development/5%20-%20Back%20End%20and%20Feature%20Testing/)  
 |-- [Database Basics](./4%20-%20Back-End%20Development/6%20-%20Database%20Basics/)  
+|-- [Working with Databases](./4%20-%20Back-End%20Development/7%20-%20Working%20with%20Databases/)  
