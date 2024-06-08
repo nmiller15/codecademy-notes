@@ -44,3 +44,4 @@ Contents
 |-- [Back-End and Feature Testing](./4%20-%20Back-End%20Development/5%20-%20Back%20End%20and%20Feature%20Testing/)  
 |-- [Database Basics](./4%20-%20Back-End%20Development/6%20-%20Database%20Basics/)  
 |-- [Working with Databases](./4%20-%20Back-End%20Development/7%20-%20Working%20with%20Databases/)  
+|-- [Designing Relational Databases](./4%20-%20Back-End%20Development/8%20-%20Designing%20Relational%20Databases/)  
