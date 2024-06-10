@@ -1,7 +1,7 @@
 Codecademy Notes
 ================
 
-<meter min=0 max=100 low=25 high=75 value=63 style="width:100%"></meter>
+<meter min=0 max=100 low=25 high=75 value=64 style="width:100%"></meter>
 
 Keep up with what I'm learning through my Codecademy Full-Stack Developer Professional Certification! These serve as my own abridged documentation on the many technologies, methodologies, and best practices I've been learning through the program!
 
@@ -45,3 +45,4 @@ Contents
 |-- [Database Basics](./4%20-%20Back-End%20Development/6%20-%20Database%20Basics/)  
 |-- [Working with Databases](./4%20-%20Back-End%20Development/7%20-%20Working%20with%20Databases/)  
 |-- [Designing Relational Databases](./4%20-%20Back-End%20Development/8%20-%20Designing%20Relational%20Databases/)  
+|-- [Advanced PostgreSQL](./4%20-%20Back-End%20Development/9%20%20-%20Advanced%20PostgreSQL/)  
