@@ -46,3 +46,4 @@ Contents
 |-- [Working with Databases](./4%20-%20Back-End%20Development/7%20-%20Working%20with%20Databases/)  
 |-- [Designing Relational Databases](./4%20-%20Back-End%20Development/8%20-%20Designing%20Relational%20Databases/)  
 |-- [Advanced PostgreSQL](./4%20-%20Back-End%20Development/9%20%20-%20Advanced%20PostgreSQL/)  
+|-- [Adding a PostgreSQL Database](./4%20-%20Back-End%20Development/10%20-%20Adding%20a%20PostgreSQL%20Database/)  
