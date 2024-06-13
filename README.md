@@ -47,3 +47,4 @@ Contents
 |-- [Designing Relational Databases](./4%20-%20Back-End%20Development/8%20-%20Designing%20Relational%20Databases/)  
 |-- [Advanced PostgreSQL](./4%20-%20Back-End%20Development/9%20%20-%20Advanced%20PostgreSQL/)  
 |-- [Adding a PostgreSQL Database](./4%20-%20Back-End%20Development/10%20-%20Adding%20a%20PostgreSQL%20Database/)  
+|-- [API Development with Swagger and OpenAI](./4%20-%20Back-End%20Development/11%20-%20API%20Development%20with%20Swagger%20and%20OpenAI/)  
