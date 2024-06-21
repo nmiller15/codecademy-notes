@@ -53,3 +53,4 @@ Contents
 |-- [Connecting Front-End to Back-End](./5%20-%20Full-Stack%20Development/1%20-%20Connecting%20Front-End%20to%20Back-End/)  
 |-- [How to Structure Your Apps](./5%20-%20Full-Stack%20Development/2%20-%20How%20to%20Structure%20Your%20Apps/)  
 |-- [Deploying Web Applications](./5%20-%20Full-Stack%20Development/3%20-%20Deploying%20Web%20Applications/)  
+|-- [Web Security Fundamentals](./5%20-%20Full-Stack%20Development/4%20-%20Web%20Security%20Fundamentals/)  
