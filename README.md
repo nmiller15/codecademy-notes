@@ -1,7 +1,7 @@
 Codecademy Notes
 ================
 
-<meter min=0 max=100 low=25 high=75 value=70 style="width:100%"></meter>
+<meter min=0 max=100 low=25 high=75 value=71 style="width:100%"></meter>
 
 Keep up with what I'm learning through my Codecademy Full-Stack Developer Professional Certification! These serve as my own abridged documentation on the many technologies, methodologies, and best practices I've been learning through the program!
 
@@ -51,3 +51,4 @@ Contents
 
 [5 - Full-Stack Development](./5%20-%20Full-Stack%20Development/)/  
 |-- [Connecting Front-End to Back-End](./5%20-%20Full-Stack%20Development/1%20-%20Connecting%20Front-End%20to%20Back-End/)  
+|-- [How to Structure Your Apps](./5%20-%20Full-Stack%20Development/2%20-%20How%20to%20Structure%20Your%20Apps/)  
