@@ -55,3 +55,4 @@ Contents
 |-- [Deploying Web Applications](./5%20-%20Full-Stack%20Development/3%20-%20Deploying%20Web%20Applications/)  
 |-- [Web Security Fundamentals](./5%20-%20Full-Stack%20Development/4%20-%20Web%20Security%20Fundamentals/)  
 |-- [Data Security](./5%20-%20Full-Stack%20Development/5%20-%20Data%20Security/)  
+|-- [Common Attacks on Web Applications](./5%20-%20Full-Stack%20Development/6%20-%20Common%20Attacks%20on%20Web%20Applications/)  
