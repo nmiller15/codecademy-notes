@@ -1,7 +1,7 @@
 Codecademy Notes
 ================
 
-<meter min=0 max=100 low=25 high=75 value=79 style="width:100%"></meter>
+<meter min=0 max=100 low=85 value=79 style="width:100%"></meter>
 
 Keep up with what I'm learning through my Codecademy Full-Stack Developer Professional Certification! These serve as my own abridged documentation on the many technologies, methodologies, and best practices I've been learning through the program!
 
