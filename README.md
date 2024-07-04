@@ -58,3 +58,6 @@ Contents
 |-- [Common Attacks on Web Applications](./5%20-%20Full-Stack%20Development/6%20-%20Common%20Attacks%20on%20Web%20Applications/)  
 |-- [Fundamentals of Operating Systems](./5%20-%20Full-Stack%20Development/7%20-%20Fundamentals%20of%20Operating%20Systmes/)  
 |-- [DevOps Fundamentals](./5%20-%20Full-Stack%20Development/8%20-%20DevOps%20Fundamentals/)  
+
+[6 - Interview Prep](./6%20-%20Interview%20Prep/)/  
+|-- [What to Expect in a Technical Interview](./6%20-%20Interview%20Prep/1%20-%20What%20to%20Expect%20in%20a%20Technical%20Interview/)  
