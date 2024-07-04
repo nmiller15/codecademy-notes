@@ -57,3 +57,4 @@ Contents
 |-- [Data Security](./5%20-%20Full-Stack%20Development/5%20-%20Data%20Security/)  
 |-- [Common Attacks on Web Applications](./5%20-%20Full-Stack%20Development/6%20-%20Common%20Attacks%20on%20Web%20Applications/)  
 |-- [Fundamentals of Operating Systems](./5%20-%20Full-Stack%20Development/7%20-%20Fundamentals%20of%20Operating%20Systmes/)  
+|-- [DevOps Fundamentals](./5%20-%20Full-Stack%20Development/8%20-%20DevOps%20Fundamentals/)  
