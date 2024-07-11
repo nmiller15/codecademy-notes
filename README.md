@@ -62,4 +62,5 @@ Contents
 [6 - Interview Prep](./6%20-%20Interview%20Prep/)/  
 |-- [What to Expect in a Technical Interview](./6%20-%20Interview%20Prep/1%20-%20What%20to%20Expect%20in%20a%20Technical%20Interview/)  
 |-- [Linear Data Structures](./6%20-%20Interview%20Prep/2%20-%20Linear%20Data%20Structures/)  
-|-- [Complex Data Structures](./6%20-%20Interview%20Prep/3%20-%20Complex%20Data%20Structures/)  
+|-- [Complex Data Structures](./6%20-%20Interview%20Prep/3%20-%20Complex%20Data%20Structures/) 
+|-- [Algorithms](./6%20-%20Interview%20Prep/4%20-%20Algorithms/)   
