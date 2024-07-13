@@ -1,7 +1,7 @@
 Codecademy Notes
 ================
 
-<meter min=0 max=100 low=85 value=98 style="width:100%"></meter>
+<meter min=0 max=100 low=85 value=100 style="width:100%"></meter>
 
 Keep up with what I'm learning through my Codecademy Full-Stack Developer Professional Certification! These serve as my own abridged documentation on the many technologies, methodologies, and best practices I've been learning through the program!
 
@@ -65,3 +65,4 @@ Contents
 |-- [Complex Data Structures](./6%20-%20Interview%20Prep/3%20-%20Complex%20Data%20Structures/) 
 |-- [Algorithms](./6%20-%20Interview%20Prep/4%20-%20Algorithms/)  
 |-- [Search and Graph Search Algorithms](./6%20-%20Interview%20Prep/5%20-%20Search%20and%20Graph%20Search%20Algorithms/)  
+|-- [Interview Skills](./6%20-%20Interview%20Prep/6%20-%20Interview%20Skills/)
